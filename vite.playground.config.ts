@@ -3,7 +3,10 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // Dev server / static build for the R3F + drei playground.
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  // GitHub Pages serves project sites from a subpath (/ghpr-three/).
+  // Use it only for production builds; keep the dev server at root.
+  base: command === 'build' ? '/ghpr-three/' : '/',
   root: resolve(__dirname, 'playground'),
   plugins: [react()],
   resolve: {
@@ -20,4 +23,4 @@ export default defineConfig({
   server: {
     open: true,
   },
-});
+}));
