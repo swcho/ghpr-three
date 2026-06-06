@@ -1,0 +1,80 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #101014;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.app {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.app canvas {
+  display: block;
+}
+
+.legend {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  max-width: 460px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(16, 16, 20, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e7e7ea;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.legend h1 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.legend p {
+  margin: 6px 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #c4c4cc;
+}
+
+.legend code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.legend .hint {
+  color: #8a8a94;
+  font-size: 11.5px;
+}
+
+.swatch {
+  font-weight: 600;
+}
+
+.swatch.low {
+  color: hsl(0, 100%, 62%);
+}
+
+.swatch.high {
+  color: hsl(238, 100%, 68%);
+}
