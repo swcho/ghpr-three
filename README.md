@@ -119,6 +119,31 @@ dist/
 
 `three` and its addons are externalized — never bundled into the library.
 
+## References
+
+This library is a direct implementation of the Hidden Point Removal operator and
+its generalization:
+
+- Sagi Katz and Ayellet Tal. **"On the Visibility of Point Clouds."**
+  _Proceedings of the IEEE International Conference on Computer Vision (ICCV)_,
+  2015, pp. 1350–1358. [doi:10.1109/ICCV.2015.159](https://doi.org/10.1109/ICCV.2015.159)
+  — introduces the _generalized_ HPR operator (the radial inversion kernels `f`
+  implemented in [`src/kernels.ts`](src/kernels.ts)).
+- Sagi Katz, Ayellet Tal, and Ronen Basri. **"Direct Visibility of Point Sets."**
+  _ACM Transactions on Graphics (Proc. SIGGRAPH)_, 26(3), 2007, Article 24.
+  [doi:10.1145/1276377.1276407](https://doi.org/10.1145/1276377.1276407)
+  — the original Hidden Point Removal operator (the `mirror` / spherical-flipping
+  kernel).
+
+If you use this work in academic research, please cite the papers above.
+
+> Note: this is an independent open-source reimplementation. It is not affiliated
+> with or endorsed by the authors of the papers.
+
 ## License
 
-MIT
+[MIT](LICENSE)
+
+The license covers this implementation only. The underlying algorithms are
+described in the papers cited above; please honor their respective citation
+requirements.
